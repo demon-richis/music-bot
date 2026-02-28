@@ -1,5 +1,0 @@
-discord.py[voice]
-yt-dlp
-spotipy
-beautifulsoup4
-requests
