@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
-from config import TOKEN, PREFIX, ACCENT_COLOR
+from config import TOKEN, PREFIXES, ACCENT_COLOR
 
 class MusicBot(commands.Bot):
     def __init__(self):
@@ -9,9 +9,9 @@ class MusicBot(commands.Bot):
         intents.message_content = True
         intents.voice_states     = True
         super().__init__(
-            command_prefix=PREFIX,
+            command_prefix=commands.when_mentioned_or(*PREFIXES),
             intents=intents,
-            activity=discord.Activity(type=discord.ActivityType.listening, name="db play"),
+            activity=discord.Activity(type=discord.ActivityType.listening, name="davey play"),
             help_command=None,
         )
 
