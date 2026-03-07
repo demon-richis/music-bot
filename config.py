@@ -3,7 +3,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN  = os.getenv("DISCORD_TOKEN")
-PREFIX = "db "
+PREFIXES = ("db ", "davey ")
+PREFIX = PREFIXES[0]
 if not TOKEN:
     raise ValueError("DISCORD_TOKEN not set! Add it to .env or Railway Variables.")
 
